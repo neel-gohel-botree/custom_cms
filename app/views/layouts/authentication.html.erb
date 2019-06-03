@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Delloite: Login</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'authentication', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="login-page">
+    <%= yield %>
+    <%= javascript_include_tag 'authentication', 'data-turbolinks-track': 'reload' %>
+  </body>
+</html>
