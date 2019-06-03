@@ -3,3 +3,7 @@
 //= require owl.carousel
 //= require bootstrap
 //= require jquery.scrollify
+//= require best_in_place
+//= require jquery-ui.min
+//= require best_in_place.jquery-ui
+//= require best-in-place

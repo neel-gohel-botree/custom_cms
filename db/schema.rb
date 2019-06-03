@@ -10,13 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190603201422) do
+ActiveRecord::Schema.define(version: 20190603212328) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "contents", force: :cascade do |t|
+    t.bigint "page_id"
+    t.text "value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["page_id"], name: "index_contents_on_page_id"
+  end
+
   create_table "pages", force: :cascade do |t|
-    t.string "background_url"
+    t.string "background_image"
     t.integer "page_order"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -35,4 +43,5 @@ ActiveRecord::Schema.define(version: 20190603201422) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "contents", "pages"
 end

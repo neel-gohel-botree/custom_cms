@@ -6,3 +6,8 @@ user = User.find_or_initialize_by(email: 'neel.gohel@botreetechnologies.com').ta
 end
 
 puts "Admin Created with Email: #{user.email} and Password: #{password}"
+
+page = Page.find_or_create_by(page_order: 1)
+if page.contents.count.zero?
+	page.contents.create(value: 'Hello World')
+end
