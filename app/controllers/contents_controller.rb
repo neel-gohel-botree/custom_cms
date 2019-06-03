@@ -2,7 +2,15 @@ class ContentsController < ApplicationController
 
 	def update
 		@content = Content.find(params[:id])
-		@content.update(content_params)
+		respond_to do |format|
+			if @content.update(content_params)
+				format.html { redirect_to(@content, :notice => 'Content was successfully updated.') }
+				format.json { respond_with_bip(@content) }
+			else
+				format.html { render :action => "edit" }
+				format.json { respond_with_bip(@content) }
+			end
+		end
 	end
 
 	private

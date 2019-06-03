@@ -1,4 +1,4 @@
 <h1>Pages#show</h1>
 <p>Find me in app/views/pages/show.html.erb</p>
 
-<%= best_in_place_if admin_user?, @page.contents.first, :value %>
+<%= best_in_place_if admin_user?, @page.contents.first, :value, as: :input %>
