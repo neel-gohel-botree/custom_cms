@@ -11,5 +11,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Precompile additional assets.
 # application.js, application.css, and all non-JS/CSS in the app/assets
 # folder are already added.
-Rails.application.config.assets.precompile += %w( authentication.js authentication.css logo-white.png login-bg.jpg logo.png)
-
+Rails.application.config.assets.precompile += %w(
+	authentication.js authentication.css logo-white.png
+	login-bg.jpg logo.png go-back.png
+)

@@ -18,6 +18,8 @@ ActiveRecord::Schema.define(version: 20190603212328) do
   create_table "contents", force: :cascade do |t|
     t.bigint "page_id"
     t.text "value"
+    t.text "content_type"
+    t.integer "content_order"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["page_id"], name: "index_contents_on_page_id"

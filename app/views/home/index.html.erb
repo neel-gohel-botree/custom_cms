@@ -1,0 +1,22 @@
+<%#=  %>
+
+<section class="panel first-block" data-section-name="home">
+	<img src="" class="bg">
+	<div class="overlay"></div>
+	<div class="container">
+		<div class="inner-content">
+			<figure>
+				<img src="" alt="video" data-toggle="modal" data-target=".video-popup">
+				<button class="play"><img src="" data-toggle="modal" data-target=".video-popup"></button>
+			</figure>
+			<h1>
+				<small><%= best_in_place_for_content_at(@contents, 2) %></small>
+				<%= best_in_place_for_content_at(@contents, 3) %>
+			</h1>
+		</div>
+	</div>
+	<div class="footer">
+		<p><%= best_in_place_for_content_at(@contents, 4) %></p>
+		<a href="#our-promise"><img src="" alt="go-back"></a>
+	</div>
+</section>
